@@ -43,8 +43,12 @@ body {
   width: 600px;  /* Increase grid container width */
   height: 450px;  /* Increase grid container height */
   margin-bottom: 30px;  /* Space between grid and button */
+  cursor: pointer;
 }
 
+.grid-item.active {
+  border: solid 2px red;
+}
 
 .input-container input {
   padding: 10px;
@@ -52,6 +56,7 @@ body {
   width: 300px; 
   margin-top: 30px;
 }
+
 
 .grid-item {
   background-color: #e0e0e0;
@@ -81,7 +86,6 @@ body {
   justify-content: center;
   
 }
-
 
 
 /* Button styling */

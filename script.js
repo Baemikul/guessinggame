@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (button) {
       button.addEventListener('click', function() {
         console.log('Button clicked!');  // Logs when the button is clicked
+        let InputBox = document.querySelector('#input-box') 
+        if(InputBox.value == '') {
+          Swal.fire({
+            icon: "error",
+            title: "WARNING",
+            text: 'No input',
+          });
+          return;
+        }
     
         const gridItems = document.querySelectorAll('.grid-item');
     
@@ -40,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
           // Highlight the chosen grid item with a border
           // gridItems[randomIndex].style.border = '2px solid #000';
 
-          let InputBox = document.querySelector('#input-box') 
           console.log("input: ", InputBox.value)
           if(InputBox.value == gridItems[randomIndex].textContent) {
             Swal.fire({
@@ -65,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Button not found!');
     }
   });
-  
+
 
   document.getElementById('num1').addEventListener('click', function(){
     document.getElementById('input-box').value=1

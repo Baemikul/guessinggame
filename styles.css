@@ -1,0 +1,114 @@
+/* Universal reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Soft gradient background */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-position: center;
+}
+
+/* Title Section */
+.title-container {
+  text-align: center;
+  margin-top: 20px; /* Space between title and top of the page */
+}
+
+.title-container h1 {
+  font-size: 3rem;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(199, 16, 16, 0.6);  /* Shadow effect for better visibility */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;  /* Space between title and grid */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Center the grid container and button */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(3, 150px);  /* Increase row height to 150px (previous was 100px) */
+  gap: 20px;  /* Increase gap between grid items */
+  width: 600px;  /* Increase grid container width */
+  height: 450px;  /* Increase grid container height */
+  margin-bottom: 30px;  /* Space between grid and button */
+}
+
+
+.input-container input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px; 
+  margin-top: 30px;
+}
+
+.grid-item {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition on color and hover */
+  font-weight: bold;
+  font-size: x-large;
+}
+
+/* Hover effect for grid items */
+.grid-item:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+  background-color: #c0c0c0;  /* Lighten color on hover */
+}
+
+/* Button container styling */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  justify-content: center;
+  
+}
+
+
+
+/* Button styling */
+.grid-button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition for button */
+  font-weight: bold;
+  margin-top: 25px;
+  height: 60px;
+  
+}
+
+/* Button hover effect */
+.grid-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/* Button active state */
+.grid-button:active {
+  transform: scale(1.05);  /* Slight shrink on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* Darker shadow on click */
+}
